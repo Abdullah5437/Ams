@@ -219,7 +219,7 @@ const handlePrint = () => {
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">#</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Code</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Supplier</th>
-    <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Supplier Urdu</th>
+    {/* <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Supplier Urdu</th> */}
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Address</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Routes</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Status</th>
@@ -232,7 +232,7 @@ const handlePrint = () => {
       <td className="px-4 py-2 text-sm text-gray-700">{indexOfFirstRoute + index + 1}</td>
       <td className="px-4 py-2 text-sm text-gray-700">{route.supplier_code}</td>
       <td className="px-4 py-2 text-sm text-gray-700">{route.name}</td>
-      <td className="px-4 py-2 text-sm text-gray-700">{route.name_ur}</td>
+      {/* <td className="px-4 py-2 text-sm text-gray-700">{route.name_ur}</td> */}
       <td className="px-4 py-2 text-sm text-gray-700">{route.address}</td>
       <td className="px-4 py-2 text-sm text-gray-700 ">{route.route?.name || '-'}</td>
       <td className="px-4 py-2 text-sm">
