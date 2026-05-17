@@ -4,9 +4,7 @@ import bundleAnalyzer from '@next/bundle-analyzer';
 const nextConfig = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 })({
-  experimental: {
-    fallbackNodePolyfills: false,
-  },
+  
   
 });
 
