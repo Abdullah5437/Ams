@@ -85,7 +85,7 @@ const Navbar = () => {
             <div className="absolute right-0 top-8 mt-2 w-48 bg-white  border border-gray-200  rounded shadow-lg z-10">
               <ul className="py-1 text-sm text-gray-700 ">
                 <li>
-                  <Link href="http://localhost:3000/Pages/Dashboard/Systems" className="block px-4 py-2 hover:bg-gray-100 ">
+                  <Link href="/Pages/Dashboard/Systems" className="block px-4 py-2 hover:bg-gray-100 ">
                     Settings
                   </Link>
                 </li>
