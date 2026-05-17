@@ -16,26 +16,16 @@ const LoginPage = () => {
     if (!email || !password) {
       toast.error('Username and password are required!');
       return;
-    }
-  
+    } 
     setLoading(true);
     try {
       const response = await axios.post(`${end_points}/user/login`, {
         email,
         password,
       },
-      {headers: {
-      'allow-origin': '*',
-      }}
-    
     );
-    console.log(response.data)
       if (response.data) {
-       
-      
-  
         localStorage.setItem('user', JSON.stringify(response.data));
-  
         router.push('/'); 
         setLoading(false)
          toast.success('Login successful!');
