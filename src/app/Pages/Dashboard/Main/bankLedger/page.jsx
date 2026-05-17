@@ -51,7 +51,7 @@ const BankList = () => {
 
         setBanks(banksWithBalance);
       } catch (error) {
-        console.error('Error fetching bank/voucher data:', error);
+         ('Error fetching bank/voucher data:', error);
       } finally {
         setLoading(false);
       }

@@ -61,7 +61,7 @@ useEffect(() => {
     const res = await axios.get(`${end_points}/parties/parties/${id}`);
     partyMapTemp[id] = res.data.name;
   } catch (err) {
-    console.error(`Error fetching party ${id}:`, err);
+     (`Error fetching party ${id}:`, err);
     partyMapTemp[id] = 'Unknown';
   }
 }
@@ -75,7 +75,7 @@ useEffect(() => {
       setItemOptions([{ value: 'all', label: 'All' }, ...saleItems]);
 
     } catch (err) {
-      console.error('Error fetching data:', err);
+       ('Error fetching data:', err);
     } finally {
       setLoading(false);
     }
@@ -197,7 +197,7 @@ useEffect(() => {
       link.click();
       document.body.removeChild(link);
     } catch (err) {
-      console.error('CSV export error:', err);
+       ('CSV export error:', err);
     }
   };
 

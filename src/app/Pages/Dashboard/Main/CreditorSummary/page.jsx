@@ -66,7 +66,7 @@ setFilteredSuppliers(suppliers); // display initially
                 allVoucherDetails.push(...result.value.data);
               } else {
                 const failedSupplier = batch[index];
-                console.error(`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
+                 (`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
               }
             });
           }
@@ -77,14 +77,14 @@ setFilteredSuppliers(suppliers); // display initially
         // Fetch all voucher details in batches
         const allVoucherDetails = await fetchVoucherDetailsInBatches(suppliers);
         setVoucherDetails(allVoucherDetails);
-        console.log(allVoucherDetails);
+         (allVoucherDetails);
 
         // ✅ Fetch all vouchers
         const voucherRes = await axios.get(`${end_points}/voucher/getAll`);
         setVouchers(voucherRes.data || []);
 
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       } finally {
         setLoading(false);
       }
@@ -147,7 +147,7 @@ const getLastPaidJV = (accountCode) => {
 };
 const getCurrentBalance = (accountCode) => {
   const entries = voucherDetails.filter(v => v.account_code === accountCode);
-   console.log(entries)
+    (entries)
   const totalDebit = entries.reduce((sum, entry) => sum + Number(entry.debit || 0), 0);
   const totalCredit = entries.reduce((sum, entry) => sum + Number(entry.credit || 0), 0);
 

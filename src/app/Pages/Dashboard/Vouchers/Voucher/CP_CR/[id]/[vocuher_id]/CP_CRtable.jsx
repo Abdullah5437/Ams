@@ -59,7 +59,7 @@ const VoucherDetailTable = ({ voucherDetails, setVoucherDetails, voucherType }) 
 
         setAccountOptions(grouped);
       } catch (error) {
-        console.error('Error fetching account options:', error);
+         ('Error fetching account options:', error);
       }
     };
 

@@ -9,8 +9,8 @@ import end_points from '../../../../../../../api_url';
 const EditDiaryVoucher = () => {
   const { id, voucher_id } = useParams(); // id = diary voucher ID
 const voucher_type='DV'
-console.log(id)
-console.log(voucher_id)
+ (id)
+ (voucher_id)
   const [loading, setLoading] = useState(true);
 
   const [formData, setFormData] = useState({
@@ -40,7 +40,7 @@ console.log(voucher_id)
         setSuppliers(suppliersRes.data.suppliers || []);
 
         const data = diaryVoucherRes.data;
-        console.log(data.supplier_code)
+         (data.supplier_code)
         setFormData({
           issue_date: data.issue_date?.split('T')[0] || '',
           cheque_date: data.cheque_date?.split('T')[0] || '',
@@ -53,7 +53,7 @@ console.log(voucher_id)
           dv_status: data.dv_status || 'A',
         });
       } catch (err) {
-        console.error('Error loading initial data:', err);
+         ('Error loading initial data:', err);
         toast.error('Failed to load voucher data.');
       } finally {
         setLoading(false);
@@ -137,7 +137,7 @@ console.log(voucher_id)
 
       toast.success('Diary Voucher updated successfully!');
     } catch (err) {
-      console.error('Error updating voucher:', err);
+       ('Error updating voucher:', err);
       toast.error('Failed to update voucher. Please try again.');
     } finally {
       setLoading(false);

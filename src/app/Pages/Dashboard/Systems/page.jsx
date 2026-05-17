@@ -40,7 +40,7 @@ function UserTable() {
           setSystemId(system.id);
         }
       } catch (err) {
-        console.error('Error fetching system:', err);
+         ('Error fetching system:', err);
         toast.error('Failed to fetch system data'); // Show error toast on fetch failure
       } finally {
         setLoading(false); // Stop loading after fetching data
@@ -72,7 +72,7 @@ function UserTable() {
       else if (type === 'cover') setCoverUrl(url);
       toast.success(`${type} uploaded successfully!`); // Show success toast on image upload
     } catch (error) {
-      console.error(`Error uploading ${type}:`, error);
+       (`Error uploading ${type}:`, error);
       toast.error(`Error uploading ${type}`); // Show error toast on upload failure
     } finally {
       setLoading(false); // Stop loading after uploading image
@@ -118,10 +118,10 @@ function UserTable() {
       );
 
       const result = await res.json();
-      console.log('System response:', result);
+       ('System response:', result);
       toast.success(`System ${systemId ? 'Updated' : 'Created'} Successfully!`); // Show success toast
     } catch (error) {
-      console.error('Submission error:', error);
+       ('Submission error:', error);
       toast.error('Submission failed. Check console for details.'); // Show error toast on submission failure
     } finally {
       setLoading(false); // Stop loading after submission

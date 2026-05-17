@@ -26,7 +26,7 @@ const SaleDetailTable = ({
       try {
         const response = await fetch(`${end_points}/items/getAll`);
         const data = await response.json();
-       console.log('Fetched items:', data);
+        ('Fetched items:', data);
         const saleItems = data
           .filter(item => item.type === 'Sale')
           .map(item => ({
@@ -36,7 +36,7 @@ const SaleDetailTable = ({
 
         setItems(saleItems);
       } catch (error) {
-        console.error('Error fetching items:', error);
+         ('Error fetching items:', error);
       }
     };
 

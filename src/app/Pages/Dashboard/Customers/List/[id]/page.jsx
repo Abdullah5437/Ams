@@ -38,7 +38,7 @@ function EditParty() {
         status: data.status === 1 ? '1' : '0',
       });
     } catch (error) {
-      console.error('Failed to load party:', error);
+       ('Failed to load party:', error);
       toast.error('Failed to load party details');
     } finally {
       setIsLoading(false);
@@ -81,7 +81,7 @@ function EditParty() {
         toast.error('Failed to update party');
       }
     } catch (error) {
-      console.error('Error updating party:', error);
+       ('Error updating party:', error);
       toast.error('Error while updating the party');
     } finally {
       setIsSubmitting(false);

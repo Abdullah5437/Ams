@@ -105,7 +105,7 @@ const [searchQuery, setSearchQuery] = useState('');
 ]);
 
       } catch (err) {
-        console.error('Error fetching data:', err);
+         ('Error fetching data:', err);
       } finally {
         setLoading(false);
       }
@@ -796,7 +796,7 @@ const handleCardPrint = () => {
   const partyName = party?.label || '';
   const shopkeeperName = partyName;
   const partyAddress = party?.address || 'پتہ درج نہیں ہے'; // Fallback if no address provided
-  console.log(party)
+   (party)
   // Format date: 24 جون
   const dateObj = new Date(startDate||new Date());
   const day = dateObj.getDate();

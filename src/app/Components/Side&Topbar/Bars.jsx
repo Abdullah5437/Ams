@@ -22,7 +22,7 @@ const Sidebar = () => {
           setSystemData(response.data.name); // Set the first item in the state
         
       } catch (error) {
-        console.error('Error fetching system data:', error);
+
       }
     };
 

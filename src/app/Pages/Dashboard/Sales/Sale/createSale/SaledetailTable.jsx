@@ -29,7 +29,7 @@ const SaleDetailTable = ({
 
         setItems(saleItems);
       } catch (error) {
-        console.error('Error fetching items:', error);
+         ('Error fetching items:', error);
       }
     };
 

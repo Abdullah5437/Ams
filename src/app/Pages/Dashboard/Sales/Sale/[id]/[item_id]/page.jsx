@@ -31,7 +31,7 @@ function CreateSale() {
         }));
         setParties(partyOptions);
       } catch (error) {
-        console.error('Error fetching parties:', error);
+         ('Error fetching parties:', error);
       }
     };
 
@@ -60,7 +60,7 @@ function CreateSale() {
           `${end_points}/saleDetail/${saleId}/${itemId}`
         );
         const detail = detailRes.data;
-        console.log('Sale Detail:', detail);
+         ('Sale Detail:', detail);
 
         const formattedDetail = {
           itemId: detail.item_id,
@@ -76,7 +76,7 @@ function CreateSale() {
       } catch (err) {
         setLoading(false)
 
-        console.error('Error loading sale or detail:', err);
+         ('Error loading sale or detail:', err);
       }
     };
 
@@ -137,7 +137,7 @@ function CreateSale() {
       setLoading(false)
 
     } catch (error) {
-      console.error('Error:', error);
+       ('Error:', error);
       setLoading(false)
       toast.error('Error while submitting the form');
     }

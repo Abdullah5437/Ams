@@ -16,23 +16,39 @@ const LoginPage = () => {
     if (!email || !password) {
       toast.error('Username and password are required!');
       return;
-    } 
+    }
+  
     setLoading(true);
     try {
       const response = await axios.post(`${end_points}/user/login`, {
         email,
         password,
       },
+      {headers: {
+      'allow-origin': '*',
+      }}
+    
     );
+   
       if (response.data) {
+       
+      
+  
         localStorage.setItem('user', JSON.stringify(response.data));
+  
         router.push('/'); 
         setLoading(false)
          toast.success('Login successful!');
       }
+      // : 
     } catch (error) {
-      console.error('Login failed:', error);
-      toast.error('Invalid credentials or server error!');
+      if(error.response.data.error == 'Login failed: User not found'){
+        toast.error('Invalid credentials');
+
+      }
+      else{
+        toast.error('Server error!')
+      }
        setLoading(false)
 
     } 

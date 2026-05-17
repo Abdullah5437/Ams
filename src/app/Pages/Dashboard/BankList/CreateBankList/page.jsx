@@ -52,7 +52,7 @@ function CreateBank() {
         toast.error('⚠️ Failed to create bank');
       }
     } catch (error) {
-      console.error('Error:', error);
+       ('Error:', error);
       toast.error('🚨 Error while submitting the form');
     } finally {
       setLoading(false); // 🧊 Hide loader

@@ -65,7 +65,7 @@ function RouteList() {
 
         setLoading(false);
       } catch (err) {
-        console.error('Error fetching data:', err);
+         ('Error fetching data:', err);
       }
     };
 
@@ -205,7 +205,7 @@ const groupByParty = () => {
       link.click();
       document.body.removeChild(link);
     } catch (err) {
-      console.error('CSV export error:', err);
+       ('CSV export error:', err);
     }
   };
 

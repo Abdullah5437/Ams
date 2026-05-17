@@ -54,7 +54,7 @@ function CreateSupplier() {
       setLoading(true);
       const res = await axios.get(`${end_points}/suppliers/suppliers/${id}`);
       const data = res.data.supplier;
-    console.log('Supplier Data:', data); // Log the supplier data
+     ('Supplier Data:', data); // Log the supplier data
       setSupplierName(data.name || '');
       setSupplierNameUrdu(data.name_ur || '');
       setAddress(data.address || '');

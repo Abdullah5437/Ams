@@ -65,14 +65,14 @@ const VoucherDetailTable = ({ voucherDetails, setVoucherDetails }) => {
 
         setAccountOptions([...suppliers, ...banks, ...parties,...initial]);
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       }
     };
 
     fetchAllData();
   }, []);
 
-  console.log(accountOptions)
+   (accountOptions)
   const handleInputChange = (index, field, value, field2, value2, field3, value3) => {
     const updated = [...voucherDetails];
     updated[index] = {

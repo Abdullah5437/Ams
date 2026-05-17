@@ -34,7 +34,7 @@ function Receiptreport() {
         setOriginalRoutes(voucherRes.data || []);
         setVoucherDetails(detailRes.data || []);
       } catch (err) {
-        console.error('Error fetching data:', err);
+         ('Error fetching data:', err);
       } finally {
         setLoading(false);
         setIsClient(true);
@@ -113,7 +113,7 @@ useEffect(() => {
       // Update state with the combined names
       setPartyNames(nameMap); // Or set a state variable for nameMap if needed
     } catch (error) {
-      console.error('Failed to fetch data:', error);
+       ('Failed to fetch data:', error);
     }
 
     setLoading(false);

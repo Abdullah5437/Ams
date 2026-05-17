@@ -28,7 +28,7 @@ function PostDairy() {
         }
       } catch (error) {
         setError('Failed to fetch data');
-        console.error('Error fetching data', error);
+         ('Error fetching data', error);
       } finally {
         setLoading(false);
       }
@@ -60,7 +60,7 @@ function PostDairy() {
         alert('Failed to update status');
       }
     } catch (error) {
-      console.error('Error updating status', error);
+       ('Error updating status', error);
       toast.error('An error occurred while updating the status');
     }
   };

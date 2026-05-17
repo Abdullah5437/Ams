@@ -30,7 +30,7 @@ const CreateVoucher = () => {
       setCustomVoucherId(newId);
       setLoading(false);
     } catch (err) {
-      console.error('Error fetching vouchers:', err);
+       ('Error fetching vouchers:', err);
       setLoading(false);
       setCustomVoucherId('');
     }
@@ -121,7 +121,7 @@ const handleSubmit = async (e) => {
     setVoucherDetails([]);
     fetchAndSetCustomVoucherId('JV');
   } catch (err) {
-    console.error(err);
+     (err);
     toast.error('❌ An error occurred while creating the voucher.');
   } finally {
     setLoading(false);

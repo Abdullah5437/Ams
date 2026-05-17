@@ -28,7 +28,7 @@ const Dashboard = () => {
         setSuppliersCount(suppliersData.suppliers.length);
         setItemsCount(itemsData.length);
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       }
     };
 

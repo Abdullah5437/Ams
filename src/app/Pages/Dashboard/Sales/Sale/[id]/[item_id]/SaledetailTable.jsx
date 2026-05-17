@@ -21,7 +21,7 @@ const SaleDetailTable = ({
         })) || [];
         setItems(options);
       } catch (error) {
-        console.error('Error fetching items:', error);
+         ('Error fetching items:', error);
       }
     };
 

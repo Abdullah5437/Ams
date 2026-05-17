@@ -22,7 +22,7 @@ const BankList = () => {
         const response = await axios.get(`${end_points}/banks/getAll`);
         setBanks(response.data || []);
       } catch (error) {
-        console.error('Error fetching banks:', error);
+         ('Error fetching banks:', error);
       } finally {
         setLoading(false);
       }

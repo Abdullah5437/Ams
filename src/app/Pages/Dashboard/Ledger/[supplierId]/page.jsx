@@ -80,7 +80,7 @@ useEffect(() => {
       setOriginalData(merged);
       setPartyOptions(combinedOptions);
     } catch (err) {
-      console.error('Error fetching data:', err);
+       ('Error fetching data:', err);
     } finally {
       setLoading(false);
     }
@@ -171,7 +171,7 @@ useEffect(() => {
       link.click();
       document.body.removeChild(link);
     } catch (err) {
-      console.error('Error exporting CSV:', err);
+       ('Error exporting CSV:', err);
     }
   };
 
@@ -307,7 +307,7 @@ async function getNameByCode(code) {
       throw new Error('Neither supplier nor party found for the given code.');
     }
   } catch (error) {
-    console.error('Error fetching data:', error);
+     ('Error fetching data:', error);
     return 'Error retrieving name.';
   }
 }

@@ -29,7 +29,7 @@ const EditVoucher = () => {
 
         const voucher = voucherRes.data;
         const details = detailRes.data || [];
-        console.log(details)
+         (details)
         setVoucherType({ value: voucher.voucher_type, label: voucher.voucher_type });
         setVoucherDate(voucher.voucher_date?.split('T')[0]);
         setNote(voucher.note);
@@ -57,7 +57,7 @@ const EditVoucher = () => {
 setLoading(false)
       } catch (err) {
         setLoading(false)
-        console.error('Error fetching voucher:', err);
+         ('Error fetching voucher:', err);
         toast.error('Failed to load voucher.');
       }
     };

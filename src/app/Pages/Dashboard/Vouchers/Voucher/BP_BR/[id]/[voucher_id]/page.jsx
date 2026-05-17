@@ -137,7 +137,7 @@ for (const detail of voucherDetails) {
     credit: detail.credit,
   };
 
-  console.log(debitEntry, 'debitEntry', detailIndex);
+   (debitEntry, 'debitEntry', detailIndex);
   try {
     // Debit entry at current index
     await axios.put(
@@ -155,13 +155,13 @@ for (const detail of voucherDetails) {
 
     detailIndex++; // increment again for next loop pair
   } catch (error) {
-    console.error("Error updating voucher detail for item:", detail, error);
+     ("Error updating voucher detail for item:", detail, error);
   }
 }
  setLoading(false)
       toast.success('Voucher and details updated successfully!');
     } catch (err) {
-      console.error(err);
+       (err);
       toast.error('An error occurred while updating the voucher.');
     }
   };

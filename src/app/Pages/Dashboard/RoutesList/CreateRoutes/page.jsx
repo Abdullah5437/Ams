@@ -29,7 +29,7 @@ function CreateRoute() {
         toast.error('Failed to create route');
       }
     } catch (error) {
-      console.error('Error creating route:', error);
+       ('Error creating route:', error);
       toast.error('Error while submitting the form');
     } finally {
       setLoading(false);

@@ -35,8 +35,8 @@ function Receiptreport() {
           axios.get(`${end_points}/parties/getAll`),
           axios.get(`${end_points}/banks/getAll`)
         ]);
-       console.log('Voucher Data:', voucherRes.data);
-        console.log('Detail Data:', detailRes.data);
+        ('Voucher Data:', voucherRes.data);
+         ('Detail Data:', detailRes.data);
         const voucherData = voucherRes.data || [];
         const detailData = detailRes.data || [];
   
@@ -78,7 +78,7 @@ function Receiptreport() {
           { value: 'Cash', label: 'Cash' }
         ]);
       } catch (err) {
-        console.error('Error fetching data:', err);
+         ('Error fetching data:', err);
       } finally {
         setLoading(false);
       }
@@ -179,7 +179,7 @@ function Receiptreport() {
       link.click();
       document.body.removeChild(link);
     } catch (err) {
-      console.error('Error exporting CSV:', err);
+       ('Error exporting CSV:', err);
     }
   };
 

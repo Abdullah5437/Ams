@@ -26,7 +26,7 @@ function EditItem() {
         setStatus(data.status === 1 ? '1' : '0');
         setType(data.type || '');
       } catch (error) {
-        console.error('Error fetching item:', error);
+         ('Error fetching item:', error);
         toast.error('Failed to load item data.');
       } finally {
         setIsLoading(false); 
@@ -57,7 +57,7 @@ function EditItem() {
         toast.error('Failed to update item');
       }
     } catch (error) {
-      console.error('Error updating item:', error);
+       ('Error updating item:', error);
       toast.error('Error while submitting the form');
     } finally {
       setIsSubmitting(false);

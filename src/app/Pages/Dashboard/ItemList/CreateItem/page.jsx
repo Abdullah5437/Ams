@@ -44,7 +44,7 @@ function CreateItem() {
         toast.error('Failed to create item'); // Show error toast
       }
     } catch (error) {
-      console.error('Error:', error);
+       ('Error:', error);
       toast.error('Error while submitting the form'); // Show error toast
     } finally {
       setIsSubmitting(false);

@@ -151,7 +151,7 @@ function Diary() {
   
     json2csv(formattedData, (err, csv) => {
       if (err) {
-        console.error('CSV export failed:', err);
+         ('CSV export failed:', err);
       } else {
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement('a');

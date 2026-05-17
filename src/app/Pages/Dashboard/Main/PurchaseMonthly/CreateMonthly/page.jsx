@@ -38,7 +38,7 @@ function CreateRoute() {
         return null;
       }
     } catch (err) {
-      console.error('Error uploading file:', err);
+       ('Error uploading file:', err);
       toast.error('Error uploading file');
       return null;
     } finally {
@@ -50,7 +50,7 @@ function CreateRoute() {
     const file = e.target.files[0];
     if (file) {
       setPurchaseFile(file);
-      console.log("Selected File:", file);
+       ("Selected File:", file);
       const uploadedUrl = await uploadFile(file);
       setUploadedFileUrl(uploadedUrl);
     }
@@ -77,8 +77,8 @@ function CreateRoute() {
         `${end_points}/monthlyPurchase/create`,
         payload
       );
-  console.log(payload)
-  console.log(response.data)
+   (payload)
+   (response.data)
       if (response.data?.message === 'Monthly purchase created') {
         toast.success('Monthly purchase created!');
         setSelectedDate('');
@@ -89,7 +89,7 @@ function CreateRoute() {
         toast.error('Monthly purchase created');
       }
     } catch (error) {
-      console.error('Monthly purchase created:', error);
+       ('Monthly purchase created:', error);
       toast.error('Error while submitting the form');
     } finally {
       setLoading(false);

@@ -24,7 +24,7 @@ const ItemsTable = () => {
           setItems(response.data);
         }
       } catch (error) {
-        console.error('Error fetching items:', error);
+         ('Error fetching items:', error);
       } finally {
         setIsLoading(false);
       }

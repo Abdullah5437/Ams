@@ -38,14 +38,14 @@ function EditRoute() {
 
     try {
       const res = await axios.put(`${end_points}/routes/routes/${id}`, payload);
-      console.log(res.data.message)
+       (res.data.message)
       if (res.data && res.data.message === 'Route updated successfully') {
         toast.success('Route updated successfully!'); // Show success toast
       } else {
         toast.error('Failed to update route'); // Show error toast
       }
     } catch (err) {
-      console.error('Error updating route:', err);
+       ('Error updating route:', err);
       toast.error('Something went wrong while updating'); // Show error toast
     } finally {
       setSubmitting(false);

@@ -55,7 +55,7 @@ function EditPurchase() {
           })) || []
         );
       } catch (err) {
-        console.error('Error loading routes/items:', err);
+         ('Error loading routes/items:', err);
       }
     };
 
@@ -99,7 +99,7 @@ function EditPurchase() {
 
           setLoading(false);
         } catch (err) {
-          console.error('Error fetching purchase:', err);
+           ('Error fetching purchase:', err);
           setLoading(false);
         }
       };
@@ -120,7 +120,7 @@ function EditPurchase() {
 
       setSuppliers(filtered);
     } catch (err) {
-      console.error('Error loading suppliers:', err);
+       ('Error loading suppliers:', err);
     }
   };
   useEffect(()=>{
@@ -128,7 +128,7 @@ function EditPurchase() {
   },[])
 
   const handleRouteChange = () => {
-    console.log('Route change is disabled on edit.');
+     ('Route change is disabled on edit.');
   };
 
   const handleSubmit = async (e) => {
@@ -167,7 +167,7 @@ function EditPurchase() {
 
       toast.success('Purchase and details updated successfully');
     } catch (err) {
-      console.error('Update failed', err);
+       ('Update failed', err);
       toast.error('Failed to update purchase');
     } finally {
       setLoading(false);

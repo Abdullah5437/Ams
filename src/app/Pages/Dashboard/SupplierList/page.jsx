@@ -21,7 +21,7 @@ function RouteList() {
     const fetchRoutes = async () => {
       try {
         const response = await axios.get(`${end_points}/suppliers/getAll`);
-        console.log( response.data.suppliers); // Log the response data
+         ( response.data.suppliers); // Log the response data
        if (response.status === 200) {
   const sortedSuppliers = response.data.suppliers.sort((a, b) =>
     a.name?.localeCompare(b.name)
@@ -29,10 +29,10 @@ function RouteList() {
   setRoutes(sortedSuppliers);
 }
  else {
-          console.error('Failed to fetch routes');
+           ('Failed to fetch routes');
         }
       } catch (error) {
-        console.error('Error fetching routes:', error);
+         ('Error fetching routes:', error);
       } finally {
         setLoading(false);
       }
@@ -82,7 +82,7 @@ function RouteList() {
       link.click();
       document.body.removeChild(link);
     } catch (err) {
-      console.error('Error exporting CSV:', err);
+       ('Error exporting CSV:', err);
     }
   };
   
@@ -219,7 +219,7 @@ const handlePrint = () => {
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">#</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Code</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Supplier</th>
-    {/* <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Supplier Urdu</th> */}
+    <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Supplier Urdu</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Address</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Routes</th>
     <th className="px-4 py-3 text-left text-sm font-medium  uppercase">Status</th>
@@ -232,7 +232,7 @@ const handlePrint = () => {
       <td className="px-4 py-2 text-sm text-gray-700">{indexOfFirstRoute + index + 1}</td>
       <td className="px-4 py-2 text-sm text-gray-700">{route.supplier_code}</td>
       <td className="px-4 py-2 text-sm text-gray-700">{route.name}</td>
-      {/* <td className="px-4 py-2 text-sm text-gray-700">{route.name_ur}</td> */}
+      <td className="px-4 py-2 text-sm text-gray-700">{route.name_ur}</td>
       <td className="px-4 py-2 text-sm text-gray-700">{route.address}</td>
       <td className="px-4 py-2 text-sm text-gray-700 ">{route.route?.name || '-'}</td>
       <td className="px-4 py-2 text-sm">

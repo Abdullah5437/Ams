@@ -55,7 +55,7 @@ function CreatePurchase() {
         setLoading(false); 
       } catch (error) {
         setLoading(false); 
-        console.error('Error fetching routes or items:', error);
+         ('Error fetching routes or items:', error);
       }
     };
     
@@ -97,14 +97,14 @@ function CreatePurchase() {
               );
               setSupplierInputs(inputs);
             } catch (error) {
-              console.error("Error fetching supplier inputs:", error);
+               ("Error fetching supplier inputs:", error);
             }
           }
         };
         fetchSupplierInputs();
 
       } catch (err) {
-        console.error("Failed to fetch purchase:", err);
+         ("Failed to fetch purchase:", err);
       }
     };
     if (purchaseId) fetchPurchaseData();
@@ -138,7 +138,7 @@ function CreatePurchase() {
       setSuppliers(filteredSuppliers);
       setHasSuppliers(filteredSuppliers.length > 0); // Check if suppliers exist for the selected route
     } catch (error) {
-      console.error('Error fetching suppliers:', error);
+       ('Error fetching suppliers:', error);
     }
   };
 
@@ -186,7 +186,7 @@ function CreatePurchase() {
       ;
       const voucherId = voucherMain?.data?.id;
 
-         console.log(voucherId)
+          (voucherId)
       await axios.put(`${end_points}/voucher/${voucherId}`, {
         voucher_id: purchaseId,
         voucher_type: 'PV',
@@ -234,8 +234,8 @@ for (const detail of filteredVoucherDetail) {
       rest
     );
   } catch (error) {
-    console.error('Error updating entry:', detail);
-    console.error(error.response?.data || error.message);
+     ('Error updating entry:', detail);
+     (error.response?.data || error.message);
   }
 }
 
@@ -254,9 +254,9 @@ try {
     `${end_points}/voucherDetail/update/${voucher_type}/${purchaseId}/${allVoucherDetails.length}`,
     debitEntry
   );
-  console.log('Debit entry update response:', debitRes.data);
+   ('Debit entry update response:', debitRes.data);
 } catch (error) {
-  console.error('Error updating debit entry:', error.response?.data || error.message);
+   ('Error updating debit entry:', error.response?.data || error.message);
 }
 
  
@@ -276,7 +276,7 @@ try {
     
       toast.error(errorMessage);
       setLoading(false);
-      console.error("Error during update:", err);
+       ("Error during update:", err);
     }
   };
   

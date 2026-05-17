@@ -20,10 +20,10 @@ function RouteList() {
       const sortedRoutes = response.data.routes.sort((a, b) => a.name.localeCompare(b.name));
       setRoutes(sortedRoutes);
     } else {
-      console.error('Failed to fetch routes');
+       ('Failed to fetch routes');
     }
   } catch (error) {
-    console.error('Error fetching routes:', error);
+     ('Error fetching routes:', error);
   } finally {
     setLoading(false);
   }

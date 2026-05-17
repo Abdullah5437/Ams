@@ -52,7 +52,6 @@ const CreateUserForm = () => {
         toast.error( 'Failed to register user.');
       }
     } catch (err) {
-      console.error('Registration error:', err);
       toast.error('Error occurred while registering user.');
     } finally {
       setLoading(false);

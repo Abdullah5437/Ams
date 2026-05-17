@@ -50,7 +50,7 @@ const CreateUserForm = () => {
         toast.error('Something went wrong.');
       }
     } catch (err) {
-      console.error('Submit error:', err);
+       ('Submit error:', err);
       toast.error('Failed to update user.');
     } finally {
       setLoading(false);

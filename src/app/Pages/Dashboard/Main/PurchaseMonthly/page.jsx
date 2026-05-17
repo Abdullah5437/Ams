@@ -15,14 +15,14 @@ function RouteList() {
     const fetchRoutes = async () => {
       try {
         const response = await axios.get(`${end_points}/monthlyPurchase/getAll`);
-        console.log(response.data)
+         (response.data)
         if (response.data) {
           setRoutes(response.data);
         } else {
-          console.error('No data found');
+           ('No data found');
         }
       } catch (error) {
-        console.error('Error fetching routes:', error);
+         ('Error fetching routes:', error);
       } finally {
         setLoading(false);
       }

@@ -96,7 +96,7 @@ function Receiptreport() {
         setResolvedBanks(bankNameMap);
   
       } catch (err) {
-        console.error(err);
+         (err);
       } finally {
         setLoading(false);
       }

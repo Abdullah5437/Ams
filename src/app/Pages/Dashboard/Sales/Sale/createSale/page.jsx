@@ -36,7 +36,7 @@ function CreateSale() {
         const saleIdResponse = await axios.get(`${end_points}/sale/latest-id`);
         setLatestSaleId(saleIdResponse.data.latest_sale_id +1); 
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       }
     };
 
@@ -61,7 +61,7 @@ function CreateSale() {
   // Handle Form Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-  console.log(taxPercentage)
+   (taxPercentage)
     const allFieldsFilled = saleDetails.every(detail =>
       detail.weight && detail.rate && detail.adjustment && detail.uom && detail.itemId && detail.vehicleNo
     );
@@ -129,7 +129,7 @@ function CreateSale() {
             );
             
           } catch (error) {
-            console.error("Error creating voucher detail for item:", detail, error);
+             ("Error creating voucher detail for item:", detail, error);
           }
         }
         
@@ -164,7 +164,7 @@ function CreateSale() {
         toast.error('Failed to create sale');
       }
     } catch (error) {
-      console.error('Error:', error);
+       ('Error:', error);
       toast.error('Error while submitting the form');
     }
   };

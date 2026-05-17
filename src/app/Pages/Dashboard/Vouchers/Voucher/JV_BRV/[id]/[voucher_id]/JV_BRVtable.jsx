@@ -59,7 +59,7 @@ const VoucherDetailTable = ({ voucherDetails, setVoucherDetails }) => {
         setAccountOptions([...suppliers, ...banks, ...parties,...initial]);
 
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       }
     };
 

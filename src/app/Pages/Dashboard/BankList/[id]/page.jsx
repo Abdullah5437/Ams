@@ -32,7 +32,7 @@ function EditBank() {
       setAccountCode(data.account_code || '');
       setStatus(data.status === 1 ? "1" : "0");
     } catch (error) {
-      console.error('Error fetching bank data:', error);
+       ('Error fetching bank data:', error);
       toast.error('🚨 Failed to load bank data.');
     } finally {
       setIsLoading(false); // End loading state
@@ -63,7 +63,7 @@ function EditBank() {
         toast.error(' Failed to update bank');
       }
     } catch (error) {
-      console.error('Error updating bank:', error);
+       ('Error updating bank:', error);
       toast.error('🚨 Error while updating the bank');
     } finally {
       setIsSubmitting(false); // End submitting state

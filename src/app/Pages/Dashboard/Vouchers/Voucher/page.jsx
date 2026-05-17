@@ -28,7 +28,7 @@ const VoucherList = () => {
         setVouchers(voucherRes.data || []);
         setVoucherDetails(detailRes.data || []);
       } catch (err) {
-        console.error('Error fetching vouchers:', err);
+         ('Error fetching vouchers:', err);
       } finally {
         setLoading(false);
       }
@@ -159,7 +159,7 @@ const exportToPDF = () => {
 
     json2csv(filteredVoucherData, (err, csv) => {
       if (err) {
-        console.error('Error converting to CSV:', err);
+         ('Error converting to CSV:', err);
       } else {
         const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement('a');

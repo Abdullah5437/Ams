@@ -73,7 +73,7 @@ const VoucherDetailTable = ({ voucherDetails, setVoucherDetails, voucherType }) 
         setMainOptions(grouped);
         setBankOptions(grouped);
       } catch (err) {
-        console.error('Error fetching dropdown data:', err);
+         ('Error fetching dropdown data:', err);
       }
     };
 

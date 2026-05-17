@@ -40,7 +40,7 @@ const CreateVoucher = () => {
       setCustomVoucherId(maxId + 1);
       setLoading(false);
     } catch (err) {
-      console.error('Error fetching vouchers:', err);
+       ('Error fetching vouchers:', err);
       setCustomVoucherId('');
       setLoading(false);
     }
@@ -81,7 +81,7 @@ const CreateVoucher = () => {
       const isBP = voucherType.value === 'BP';
 
       for (const detail of voucherDetails) {
-        console.log(detail)
+         (detail)
         const debitEntry = {
           main_id: voucherId,
           account_code: detail.account_code,
@@ -102,7 +102,7 @@ const CreateVoucher = () => {
           await axios.post(`${end_points}/voucherDetail/create`, debitEntry);
           await axios.post(`${end_points}/voucherDetail/create`, creditEntry);
         } catch (error) {
-          console.error("Error creating voucher detail for item:", detail, error);
+           ("Error creating voucher detail for item:", detail, error);
         }
       }
 
@@ -115,7 +115,7 @@ const CreateVoucher = () => {
       fetchAndSetCustomVoucherId(voucherTypeOptions[0].value);
       setLoading(false);
     } catch (err) {
-      console.error(err);
+       (err);
       setLoading(false);
       toast.error('An error occurred while creating the voucher.');
     }

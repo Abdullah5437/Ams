@@ -21,7 +21,7 @@ function UserTable() {
         const response = await axios.get(`${end_points}/user/getAll`);
         setUsers(response.data || []);
       } catch (error) {
-        console.error('Error fetching users:', error);
+         ('Error fetching users:', error);
       } finally {
         setLoading(false);
       }
@@ -57,7 +57,7 @@ function UserTable() {
         toast.error(`Failed to delete ${selectedUser.firstname}.`);
       }
     } catch (error) {
-      console.error('Delete error:', error);
+       ('Delete error:', error);
       toast.error('Something went wrong while deleting the user.');
     } finally {
       setShowModal(false);  // Close the modal after the operation completes

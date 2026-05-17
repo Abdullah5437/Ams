@@ -45,7 +45,7 @@ function DebtorSummary() {
                 allVoucherDetails.push(...result.value.data);
               } else {
                 const failedParty = batch[index];
-                console.error(`Failed to fetch voucher details for party ${failedParty.party_code}:`, result.reason);
+                 (`Failed to fetch voucher details for party ${failedParty.party_code}:`, result.reason);
               }
             });
           }
@@ -58,7 +58,7 @@ function DebtorSummary() {
         const voucherRes = await axios.get(`${end_points}/voucher/getAll`);
         setVouchers(voucherRes.data || []);
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       } finally {
         setLoading(false);
       }

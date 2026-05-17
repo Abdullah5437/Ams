@@ -105,7 +105,7 @@ const [searchQuery, setSearchQuery] = useState('');
 ]);
 
       } catch (err) {
-        console.error('Error fetching data:', err);
+         ('Error fetching data:', err);
       } finally {
         setLoading(false);
       }

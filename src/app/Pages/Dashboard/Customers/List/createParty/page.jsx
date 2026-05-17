@@ -60,7 +60,7 @@ function CreateParty() {
         toast.error('Failed to create party');
       }
     } catch (error) {
-      console.error('Error:', error);
+       ('Error:', error);
       toast.error('Something went wrong');
     } finally {
       setLoading(false);

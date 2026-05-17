@@ -55,7 +55,7 @@ function CreatePurchase() {
         setLoading(false); 
       } catch (error) {
         setLoading(false); 
-        console.error('Error fetching routes or items:', error);
+         ('Error fetching routes or items:', error);
       }
     };
     
@@ -79,7 +79,7 @@ function CreatePurchase() {
       setSuppliers(filteredSuppliers);
       setHasSuppliers(filteredSuppliers.length > 0); 
     } catch (error) {
-      console.error('Error fetching suppliers:', error);
+       ('Error fetching suppliers:', error);
     }
   };
 
@@ -166,7 +166,7 @@ function CreatePurchase() {
               );
               responses.push(res.data);
             } catch (error) {
-              console.error(error.response?.data || error.message);
+               (error.response?.data || error.message);
               responses.push(null);
             }
           }
@@ -185,10 +185,10 @@ function CreatePurchase() {
               debitEntry
             );
             setLoading(false);
-            console.log('Debit entry response:', debitRes.data);
+             ('Debit entry response:', debitRes.data);
           } catch (error) {
             setLoading(false);
-            console.error('Error posting debit entry:', error.response?.data || error.message);
+             ('Error posting debit entry:', error.response?.data || error.message);
           }
         }
         else {
@@ -202,7 +202,7 @@ function CreatePurchase() {
     } catch (error) {
       setLoading(false);
       toast.error('Error while submitting the form');
-      console.error(error);
+       (error);
     }
   };
   

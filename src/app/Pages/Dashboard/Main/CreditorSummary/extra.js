@@ -56,9 +56,9 @@ const fetchPurchaseDetailsInBatches = async (suppliers, concurrency = 5) => {
           totalQty
         };
 
-        console.log(`Fetched purchase avg for ${supplier.name}: ${avgQty}`);
+         (`Fetched purchase avg for ${supplier.name}: ${avgQty}`);
       } catch (error) {
-        console.error(`Error for supplier ${supplier.id}:`, error.message);
+         (`Error for supplier ${supplier.id}:`, error.message);
         detailsMap[supplier.supplier_code] = { avgQty: 0, totalQty: 0 };
       }
     }
@@ -109,7 +109,7 @@ useEffect(() => {
               allVoucherDetails.push(...result.value.data);
             } else {
               const failedSupplier = batch[index];
-              console.error(`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
+               (`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
             }
           });
         }
@@ -128,7 +128,7 @@ useEffect(() => {
       setSupplierPurchaseDetails(purchaseMap);
 
     } catch (error) {
-      console.error('Error fetching data:', error);
+       ('Error fetching data:', error);
     } finally {
       setLoading(false);
     }
@@ -181,7 +181,7 @@ useEffect(() => {
 //                 allVoucherDetails.push(...result.value.data);
 //               } else {
 //                 const failedSupplier = batch[index];
-//                 console.error(`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
+//                  (`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
 //               }
 //             });
 //           }
@@ -192,14 +192,14 @@ useEffect(() => {
 //         // Fetch all voucher details in batches
 //         const allVoucherDetails = await fetchVoucherDetailsInBatches(suppliers);
 //         setVoucherDetails(allVoucherDetails);
-//         console.log(allVoucherDetails);
+//          (allVoucherDetails);
 
 //         // ✅ Fetch all vouchers
 //         const voucherRes = await axios.get(`https://accounts-management.onrender.com/common/voucher/getAll`);
 //         setVouchers(voucherRes.data || []);
 
 //       } catch (error) {
-//         console.error('Error fetching data:', error);
+//          ('Error fetching data:', error);
 //       } finally {
 //         setLoading(false);
 //       }

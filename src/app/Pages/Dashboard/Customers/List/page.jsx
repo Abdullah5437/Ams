@@ -19,10 +19,10 @@ const RoutesTable = () => {
       setLoading(true); // Start loading
       try {
         const response = await axios.get(`${end_points}/parties/getAll`);
-        console.log(response.data);
+         (response.data);
         setRoutes(response.data);
       } catch (error) {
-        console.error('Error fetching routes:', error);
+         ('Error fetching routes:', error);
       } finally {
         setLoading(false); // End loading
       }

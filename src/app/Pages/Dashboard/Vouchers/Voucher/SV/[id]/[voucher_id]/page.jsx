@@ -30,7 +30,7 @@ function EditSale() {
         const response = await axios.get(`${end_points}/voucherDetail/main/${id}`);
         setVoucherDetails(response.data);
       } catch (error) {
-        console.error('Error fetching voucher details:', error);
+         ('Error fetching voucher details:', error);
       }
     };
 
@@ -68,7 +68,7 @@ function EditSale() {
 
         // Fetch sale details (handle single object or array)
         const saleDetailsResponse = await axios.get(`${end_points}/saleDetail/${voucher_id}`);
-          console.log('Fetched sale details:', saleDetailsResponse.data);
+           ('Fetched sale details:', saleDetailsResponse.data);
         const rawDetails = saleDetailsResponse.data;
         let detailsArray = [];
 
@@ -77,7 +77,7 @@ function EditSale() {
         } else if (rawDetails && typeof rawDetails === 'object') {
           detailsArray = [rawDetails]; // wrap single object into array
         } else {
-          console.error('Unexpected saleDetails format:', rawDetails);
+           ('Unexpected saleDetails format:', rawDetails);
           detailsArray = [];
         }
 
@@ -91,7 +91,7 @@ function EditSale() {
         setLoading(false);
       } catch (error) {
         setLoading(false);
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       }
     };
 
@@ -188,7 +188,7 @@ function EditSale() {
     } catch (error) {
       setLoading(false);
       toast.error('Failed to update sale');
-      console.error('Update sale error:', error);
+       ('Update sale error:', error);
     }
   };
 

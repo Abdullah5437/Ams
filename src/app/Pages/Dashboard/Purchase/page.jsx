@@ -50,7 +50,7 @@ const Purchase = () => {
 
         setMergedData(merged);
       } catch (error) {
-        console.error('Error fetching data:', error);
+         ('Error fetching data:', error);
       } finally {
         setLoading(false);
       }
@@ -99,7 +99,7 @@ const Purchase = () => {
 
           setSupplierDetails(supplierMap);
         } catch (err) {
-          console.error('Error fetching supplier details:', err);
+           ('Error fetching supplier details:', err);
         }
       }
     };

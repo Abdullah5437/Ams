@@ -128,7 +128,7 @@ const CreateVoucher = () => {
       fetchAndSetCustomVoucherId(voucherTypeOptions[0].value);
     } catch (err) {
       setLoading(false);
-      console.error('An error occurred while creating the voucher:', err);
+       ('An error occurred while creating the voucher:', err);
       toast.error('An error occurred while creating the voucher.');
     }
   };

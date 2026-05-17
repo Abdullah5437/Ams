@@ -36,9 +36,9 @@ const fetchPurchaseDetailsInBatches = async (suppliers, concurrency = 5) => {
         const avgRate = totalQty > 0 ? totalAmount / totalQty : 0;
 
         detailsMap[supplier.id] = { weight: totalQty, rate: avgRate };
-        console.log(`Fetched: ${supplier.id}`, detailsMap[supplier.id]);
+         (`Fetched: ${supplier.id}`, detailsMap[supplier.id]);
       } catch (error) {
-        console.error(`Error for ${supplier.id}:`, error.message);
+         (`Error for ${supplier.id}:`, error.message);
         detailsMap[supplier.id] = { weight: 0, rate: 0 };
       }
     }
@@ -98,7 +98,7 @@ useEffect(() => {
               allVoucherDetails.push(...result.value.data);
             } else {
               const failedSupplier = batch[index];
-              console.error(`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
+               (`Failed to fetch voucher details for supplier ${failedSupplier.supplier_code}:`, result.reason);
             }
           });
         }
@@ -119,7 +119,7 @@ useEffect(() => {
       setSupplierPurchaseDetails(supplierPurchaseDetails);
 
     } catch (error) {
-      console.error('Error fetching data:', error);
+       ('Error fetching data:', error);
       
     } finally {
       setLoading(false);

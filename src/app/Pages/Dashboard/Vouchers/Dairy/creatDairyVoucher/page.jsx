@@ -30,7 +30,7 @@ const CreateDiaryVoucher = () => {
         const res = await axios.get(`${end_points}/banks/getAll`);
         setBanks(res.data || []);
       } catch (err) {
-        console.error('Failed to fetch banks:', err);
+         ('Failed to fetch banks:', err);
       }
     };
 
@@ -39,7 +39,7 @@ const CreateDiaryVoucher = () => {
         const res = await axios.get(`${end_points}/suppliers/getAll`);
         setSuppliers(res.data.suppliers || []);
       } catch (err) {
-        console.error('Failed to fetch suppliers:', err);
+         ('Failed to fetch suppliers:', err);
       } finally {
         setLoading(false);
       }
@@ -150,7 +150,7 @@ const CreateDiaryVoucher = () => {
         dv_status: 'A',
       });
     } catch (err) {
-      console.error('Error during voucher creation:', err);
+       ('Error during voucher creation:', err);
       toast.error('Failed to create voucher. Please try again.');
       setLoading(false);
     }

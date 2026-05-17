@@ -27,7 +27,7 @@ function Receiptreport() {
 const extractWeightAndMonth = (particulars) => {
   if (typeof particulars !== 'string') return null;
 
-  console.log('Original Particulars:', particulars);
+   ('Original Particulars:', particulars);
 
   // Updated regex to allow prefix before the weight@rate
   const match = particulars.match(/.*?(\d+(?:\.\d+)?)@\d+\/-\s*\(\s*(\w{3})-(\d{4})\s*\)/);
@@ -44,8 +44,8 @@ const extractWeightAndMonth = (particulars) => {
   const monthNumber = new Date(`${month} 1, ${year}`).getMonth() + 1;
   const monthKey = `${year}-${String(monthNumber).padStart(2, '0')}`;
 
-  console.log('Parsed Weight:', weight);
-  console.log('Parsed MonthKey:', monthKey);
+   ('Parsed Weight:', weight);
+   ('Parsed MonthKey:', monthKey);
 
   return { weight, monthKey };
 };
@@ -77,7 +77,7 @@ const extractWeightAndMonth = (particulars) => {
               if (res.status === 'fulfilled' && Array.isArray(res.value.data)) {
                 allVoucherDetails.push(...res.value.data);
               } else {
-                console.error(`Failed to fetch for ${batch[idx].supplier_code}`);
+                 (`Failed to fetch for ${batch[idx].supplier_code}`);
               }
             });
           }
@@ -121,11 +121,11 @@ const extractWeightAndMonth = (particulars) => {
         };
 
         const purchaseMap = calculateAverageFromParticulars();
-        console.log(purchaseMap)
+         (purchaseMap)
         setSupplierPurchaseDetails(purchaseMap);
 
       } catch (err) {
-        console.error('Error fetching data:', err);
+         ('Error fetching data:', err);
       } finally {
         setLoading(false);
       }
