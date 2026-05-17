@@ -3,7 +3,7 @@
 }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #4d87df; /* Blue color */
+    background-color: #062c66; /* Blue color */
     border-radius: 9999px; /* Full rounding */
     /* Set a fixed height for the thumb */
     height: 8px; /* This is the height of the thumb */
